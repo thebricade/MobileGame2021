@@ -1,8 +1,8 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseMovement : MonoBehaviour
+public class MouseTouch : MonoBehaviour
 {
     // Start is called before the first frame update
     private Vector3 touchPosition;
@@ -27,10 +27,10 @@ public class MouseMovement : MonoBehaviour
         // https://docs.unity3d.com/ScriptReference/Input.GetMouseButton.html
         if (Input.GetMouseButton(0))
         {
-           touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             touchPosition.z = 0;
-          //  touchPosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-         //   touchPosition.z = 0;
+            //  touchPosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+            //   touchPosition.z = 0;
             
             direction = (touchPosition - transform.position).normalized;
             rb2d.velocity = direction * speed; 
