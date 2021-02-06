@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MouseTouch : MonoBehaviour
 {
-    // Start is called before the first frame update
+   
     private Vector3 touchPosition;
     private Vector3 direction; 
     
@@ -29,14 +29,14 @@ public class MouseTouch : MonoBehaviour
         {
             touchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             touchPosition.z = 0;
-            //  touchPosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
-            //   touchPosition.z = 0;
-            
             direction = (touchPosition - transform.position).normalized;
-            rb2d.velocity = direction * speed; 
-            // var worldPos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
+            rb2d.velocity = direction * speed;
         }
-        rb2d.AddForce(Vector2.zero);
+        else
+        {
+            rb2d.velocity =(Vector2.zero);
+        }
+ 
         
      
     }
