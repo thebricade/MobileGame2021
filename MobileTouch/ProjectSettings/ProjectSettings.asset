@@ -753,10 +753,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: 086cf559-1595-4613-973c-9e6b39a68901
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: HyperCasual
+  organizationId: brianna-521101
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
